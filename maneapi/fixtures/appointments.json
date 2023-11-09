@@ -4,6 +4,8 @@
         "pk": 1,
         "fields": {
             "customer": 2,
+            "stylist": 1,
+            "created_by": 2,
             "prepaid": true,
             "appointment_date": "2023-02-02"
         }
@@ -13,6 +15,8 @@
         "pk": 2,
         "fields": {
             "customer": 4,
+            "stylist": 3,
+            "created_by": 1,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }
@@ -22,6 +26,8 @@
         "pk": 3,
         "fields": {
             "customer": 3,
+            "stylist": 1,
+            "created_by": 2,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }
@@ -31,6 +37,8 @@
         "pk": 4,
         "fields": {
             "customer": 4,
+            "stylist": 1,
+            "created_by": 3,
             "prepaid": true,
             "appointment_date": "2023-02-02"
         }
@@ -40,6 +48,8 @@
         "pk": 5,
         "fields": {
             "customer": 5,
+            "stylist": 3,
+            "created_by": 2,
             "prepaid": true,
             "appointment_date": "2023-02-02"
         }
@@ -49,6 +59,8 @@
         "pk": 6,
         "fields": {
             "customer": 5,
+            "stylist": 2,
+            "created_by": 3,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }
@@ -58,6 +70,8 @@
         "pk": 7,
         "fields": {
             "customer": 1,
+            "stylist": 3,
+            "created_by": 1,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }
@@ -67,6 +81,8 @@
         "pk": 8,
         "fields": {
             "customer":3,
+            "stylist": 1,
+            "created_by": 2,
             "prepaid": true,
             "appointment_date": "2023-02-02"
         }
@@ -76,6 +92,8 @@
         "pk": 9,
         "fields": {
             "customer": 1,
+            "stylist": 1,
+            "created_by": 3,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }
@@ -85,6 +103,8 @@
         "pk": 10,
         "fields": {
             "customer": 2,
+            "stylist": 2,
+            "created_by": 3,
             "prepaid": false,
             "appointment_date": "2023-02-02"
         }

@@ -1,7 +1,7 @@
 [
     {
         "model": "auth.user",
-        "pk": 3,
+        "pk": 1,
         "fields": {
             "password": "pbkdf2_sha256$390000$bc8NjxRlh2stajvVihzprb$HN2rBBoPFpj1scJJ8vNPxzZxGb1oZvzftq2/JVnpxzY=",
             "last_login": null,
@@ -19,7 +19,7 @@
     },
     {
         "model": "auth.user",
-        "pk": 4,
+        "pk": 2,
         "fields": {
             "password": "pbkdf2_sha256$390000$ibOvHqNYyV6ESMJMFBdD1w$rnckTgsxsWMct+vUNtRCja0NXx/1VOZu5UIQTWHZFM0=",
             "last_login": null,
@@ -37,7 +37,7 @@
     },
     {
         "model": "auth.user",
-        "pk": 5,
+        "pk": 3,
         "fields": {
             "password": "pbkdf2_sha256$390000$N2wxJN9yYpe8hzjfeyxLOZ$iSQ6NOnN9wsXApYm0MlN3aTbrtSUariiQrhmuWjYQhw=",
             "last_login": null,

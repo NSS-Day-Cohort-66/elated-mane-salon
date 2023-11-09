@@ -77,8 +77,17 @@ class EquipmentView(ViewSet):
         return Response(serialized.data, status=status.HTTP_201_CREATED)
 
 
+class EquipmentTypeSerializer(serializers.ModelSerializer):
+    """JSON serializer for equipment creator"""
+
+    class Meta:
+        """JSON serializer for equipment creator"""
+        model = EquipmentType
+        fields = ( 'id', 'label' )
+
 class EquipmentSerializer(serializers.ModelSerializer):
     """JSON serializer for equipment creator"""
+    type = EquipmentTypeSerializer(many=False)
 
     class Meta:
         """JSON serializer for equipment creator"""

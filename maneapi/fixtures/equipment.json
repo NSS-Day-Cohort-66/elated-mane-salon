@@ -3,7 +3,7 @@
         "model": "maneapi.equipment",
         "pk": 1,
         "fields": {
-            "stylist": 4,
+            "stylist": 1,
             "type": 2,
             "manufacturer": "Umber Inc",
             "cost": 48.34,
@@ -36,7 +36,7 @@
         "model": "maneapi.equipment",
         "pk": 4,
         "fields": {
-            "stylist": 4,
+            "stylist": 2,
             "type": 2,
             "manufacturer": "soluta-exercitationem-dolor",
             "cost": 73.12,
@@ -47,7 +47,7 @@
         "model": "maneapi.equipment",
         "pk": 5,
         "fields": {
-            "stylist": 5,
+            "stylist": 1,
             "type": 2,
             "manufacturer": "rerum-facere-iste",
             "cost": 48.34,
@@ -58,7 +58,7 @@
         "model": "maneapi.equipment",
         "pk": 6,
         "fields": {
-            "stylist": 5,
+            "stylist": 2,
             "type": 3,
             "manufacturer": "ut-eos-rem",
             "cost": 48.34,
@@ -69,7 +69,7 @@
         "model": "maneapi.equipment",
         "pk": 7,
         "fields": {
-            "stylist": 4,
+            "stylist": 3,
             "type": 3,
             "manufacturer": "vel-sint-quo",
             "cost": 48.34,
@@ -80,7 +80,7 @@
         "model": "maneapi.equipment",
         "pk": 8,
         "fields": {
-            "stylist":3,
+            "stylist": 1,
             "type": 1,
             "manufacturer": "aut-minima-ad",
             "cost": 48.34,
@@ -102,7 +102,7 @@
         "model": "maneapi.equipment",
         "pk": 10,
         "fields": {
-            "stylist": 5,
+            "stylist": 2,
             "type": 1,
             "manufacturer": "similique-perferendis-id",
             "cost": 48.34,

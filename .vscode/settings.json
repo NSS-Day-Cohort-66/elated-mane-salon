@@ -1,5 +1,4 @@
 {
-    "python.linting.pylintEnabled": true,
     "sqltools.connections": [
         {
             "previewLimit": 50,
@@ -9,8 +8,8 @@
         }
     ],
     "python.testing.cwd": "tests",
-    "python.linting.pylintArgs": [
+    "pylint.args": [
         "--load-plugins=pylint_django",
-        "--django-settings-module=levelup.settings",
+        "--django-settings-module=elatedmane.settings",
     ],
 }

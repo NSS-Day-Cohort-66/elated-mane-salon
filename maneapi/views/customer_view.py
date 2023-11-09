@@ -3,7 +3,7 @@ from rest_framework import serializers, status
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 from django.contrib.auth.models import User
-from maneapi.models import Customer
+from maneapi.models import Customer, HairStyle
 
 
 class CustomerView(ViewSet):
@@ -15,13 +15,10 @@ class CustomerView(ViewSet):
         Returns:
             Response -- Empty body with 204 status code
         """
-        customer = Customer.objects.get(pk=pk)
-
-        # Check for invalid characters in the title
-        stylist_id = request.data["stylist_id"]
         name = request.data["name"]
 
-        customer.stylist = User.objects.get(pk=stylist_id)
+        customer = Customer.objects.get(pk=pk)
+        customer.style = HairStyle.objects.get(pk=request.data["style_id"])
         customer.name = name
         customer.save()
 
@@ -55,19 +52,31 @@ class CustomerView(ViewSet):
             Response -- JSON serialized customer instance
         """
         customer = Customer()
-        customer.stylist = User.objects.get(pk=request.data["stylist_id"])
         customer.name = request.data["name"]
+        customer.style = HairStyle.objects.get(pk=request.data["style_id"])
         customer.save()
 
         serialized = CustomerSerializer(customer, context={'request': request})
         return Response(serialized.data, status=status.HTTP_201_CREATED)
 
 
+class CustomerStylistSerializer(serializers.ModelSerializer):
+    full_name = serializers.SerializerMethodField()
+
+    def get_full_name(self, obj):
+        return f'{obj.first_name} {obj.last_name}'
+
+    class Meta:
+        """JSON serializer for customer creator"""
+        model = User
+        fields = ('id', 'full_name', 'clients')
+
+
 class CustomerSerializer(serializers.ModelSerializer):
     """JSON serializer for customer creator"""
-
+    stylists = CustomerStylistSerializer(many=True)
 
     class Meta:
         """JSON serializer for customer creator"""
         model = Customer
-        fields = ('id', 'stylist', 'name', 'date_created',)
+        fields = ('id', 'stylists', 'name', 'date_created',)
