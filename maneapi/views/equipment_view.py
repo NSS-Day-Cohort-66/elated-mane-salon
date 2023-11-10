@@ -1,5 +1,5 @@
 """View module for handling requests about equipments"""
-from rest_framework import serializers, status
+from rest_framework import serializers, status, permissions
 from rest_framework.response import Response
 from rest_framework.viewsets import ViewSet
 from django.contrib.auth.models import User
@@ -7,6 +7,22 @@ from maneapi.models import Equipment, EquipmentType
 
 
 class EquipmentView(ViewSet):
+    # permission_classes = (permissions.AllowAny,)
+
+    def get_permissions(self):
+        """
+        Override the get_permissions method to set permissions dynamically.
+
+        GET requests do not require a token
+        POST, PUT, DELETE require a token
+        """
+        method = self.request.method
+        if method == "GET":
+            permission_classes = [permissions.AllowAny]
+        else:
+            permission_classes = [permissions.IsAuthenticated]  # Default permission for other methods
+        return [permission() for permission in permission_classes]
+
     """Viewset for equipments"""
 
     def update(self, request, pk=None):
